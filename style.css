@@ -1,0 +1,264 @@
+/* define the cascade specificity layers */
+
+@layer bootstrap, overrides;
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css") layer(bootstrap);
+
+@layer overrides {
+    :root {
+        --theme-green: rgb(71, 124, 99);
+        --theme-lavendar: #c38cc9;
+        --theme-grey: #727272;
+        --theme-dark: rgb(48, 47, 47);
+        --spacing: 1em;
+
+    }
+
+    .banner {
+        background-color: var(--theme-dark);
+        
+    }
+
+    .navbar-nav{
+        align-items: flex-end;
+        font-family: "Elms Sans";
+    }
+    .navbar-brand {
+        font-size: 150%;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .nav-link:hover {
+        color: var(--theme-lavendar);
+    }
+
+}    
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+    width: 100%;}
+
+.image-text {
+  position: absolute;
+  bottom: 70px;
+  left: 100px;
+}
+
+/* main {
+        background-image: url(https://picsum.photos/2000/300);
+        height: 400px;
+        color: white;
+        background-repeat: no-repeat;
+        padding: 50px;
+    } */
+
+/* 
+    .btn-danger {
+        background-color: var(--theme-lavendar);
+    } */
+
+    h1 {
+        font-family: "Elms Sans";
+        font-size: 60px;
+        text-align: center;
+        
+    }
+
+    a {
+    text-decoration: none;
+    color: var(--theme-dark);
+    }
+
+    a:hover {
+        color: var(--theme-lavendar);
+    }
+
+    h2 {
+        color: var(--theme-lavendar);
+        font-family: "Elms Sans", bold;
+    }
+
+    #toAbout {
+        padding: 100px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    li {
+        margin-left: 40px;
+    }
+
+    .wrapper {
+       /* background-color: #a3bba9; */
+   /* padding: 20px; */
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+.returnTo {
+    padding: 100px;
+    text-align: center;
+    font-family: "Elms Sans";
+}
+
+
+
+
+/* GRAPHIC DESIGN PAGE */
+
+
+.containerGD {
+    display: grid;
+    /* background-color: white; */
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 100px 3fr 2fr 100px;
+    row-gap: var(--spacing);   
+    column-gap: 2em; 
+}
+.grid-container {
+    grid-area: 2/2/3/3;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height: 100vh;
+    padding: 100px;
+}
+
+.hero {
+    grid-area: 2/2/3/3;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;}
+
+
+.card {
+    grid-area: 2/3/3/4;
+    padding: var(--spacing);
+    /* color: var(--text-colour); */
+}
+
+.hero2 {
+    grid-area: 3/2/3/3;
+    position: relative;
+}
+
+.hero2 img {
+    width: 100%;}
+
+
+/* .card2 {
+    grid-area: 3/3/3/4;
+    background-color: var(--secondary-bg);
+    padding: var(--spacing);
+    color: var(--text-colour);
+} */
+
+.hero3 {
+    grid-area: 3/3/3/4;
+    position: relative;
+}
+
+.hero3 img {
+    width: 100%;}
+
+
+.card3 {
+    grid-area: 3/3/3/5;
+    background-color: var(--secondary-bg);
+    padding: var(--spacing);
+    color: var(--text-colour);
+}
+
+
+
+/* ILLUSTRATION PAGE */
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: var(--theme-grey);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: var(--theme-dark);
+}
+
+.btn.active {
+  background-color: var(--theme-dark);
+  color: var(--theme-lavendar);
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.contain {
+  position: relative;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contain:hover .image {
+  opacity: 0.3;
+}
+
+.contain:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: var(--theme-dark);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
